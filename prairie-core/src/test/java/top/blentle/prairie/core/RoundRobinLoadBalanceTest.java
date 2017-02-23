@@ -8,6 +8,6 @@ package top.blentle.prairie.core;
  * @description:
  * @since: 1.0
  */
-public class RoundRobinLoadBlanceTest {
+public class RoundRobinLoadBalanceTest {
 
 }
