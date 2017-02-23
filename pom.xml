@@ -6,22 +6,22 @@
 
     <groupId>top.blentle</groupId>
     <artifactId>prairie-parent</artifactId>
-	<name>prairie-parent</name>
+    <name>prairie-parent</name>
     <version>0.1</version>
-	<packaging>pom</packaging>
+    <packaging>pom</packaging>
 
     <modules>
         <module>prairie-core</module>
     </modules>
 
     <dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.12</version>
-			</dependency>
-		</dependencies>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
 </project>
