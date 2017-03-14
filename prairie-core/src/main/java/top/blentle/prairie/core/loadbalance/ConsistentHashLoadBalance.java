@@ -8,17 +8,14 @@ import java.util.List;
 /**
  * @author: blentle
  * @group: rd
- * @createdate: 2017/1/23 11:34
+ * @createdate: 2017/3/7 15:37
  * @mail: blentle.huan.ren@gmail.com
- * @description: for each all of url
+ * @description:
  * @since: 1.0
  */
-public class RoundRobinLoadBalance extends AbstractLoadBalance<RoundRobinLoadBalance> {
-
-    private static final String ROUND_ROBIN = "roundRobin";
+public class ConsistentHashLoadBalance extends  AbstractLoadBalance<ConsistentHashLoadBalance>{
 
     public Invoker get(List<Invoker> invokerList, URL url, Invocation invocation) throws PrairieException {
-        //........
         return null;
     }
 }

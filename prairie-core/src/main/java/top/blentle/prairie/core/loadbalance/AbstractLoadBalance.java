@@ -9,5 +9,5 @@ package top.blentle.prairie.core.loadbalance;
  * @since: 1.0
  */
 public abstract class AbstractLoadBalance<T> implements LoadBalance {
-
+    //todo:do some preparations for extending in the future
 }
