@@ -1,2 +1,2 @@
 # prairie
-a high performance rpc framework 
+> a  rpc framework ,use eventbus based on jdk8+
