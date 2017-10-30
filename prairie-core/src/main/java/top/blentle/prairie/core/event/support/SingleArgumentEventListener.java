@@ -2,7 +2,6 @@ package top.blentle.prairie.core.event.support;
 
 import top.blentle.prairie.core.event.Event;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 

@@ -22,6 +22,8 @@ public class DefaultEventBus implements EventBus {
 
     private static final Logger logger = LoggerFactory.getLogger(DefaultEventBus.class);
 
+    private static final EventListenerComparator LISTENER_COMPARATOR = new EventListenerComparator();
+
     @Override
     public void publishEvent(Event event) {
         if (event == null) {
@@ -46,9 +48,9 @@ public class DefaultEventBus implements EventBus {
         private List<EventListener> listeners;
 
         public Subscription(Set<EventListener> listeners) {
-            List<EventListener> toSort = new ArrayList<EventListener>(listeners);
-            //Collections.sort(toSort, EVENT_LISTENER_COMPARATOR);
-           // this.listeners = listeners;
+            List<EventListener> sortedListeners = new ArrayList<EventListener>(listeners);
+            Collections.sort(sortedListeners, LISTENER_COMPARATOR);
+            this.listeners = sortedListeners;
         }
 
 
