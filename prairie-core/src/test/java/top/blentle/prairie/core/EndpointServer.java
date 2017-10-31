@@ -44,6 +44,12 @@ public class EndpointServer {
                     //todo:
                 } finally {
 
+                    try {
+                        is.close();
+                        os.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }).start();
         }
