@@ -41,10 +41,17 @@ public class TenorPidWriter implements EventListener {
     @Override
     public void onEvent(Event event) {
         //create pid file
+        writePidFile(event);
     }
 
     @Override
     public boolean accept(Event event) {
         return false;
+    }
+
+    private void writePidFile(Event event) {
+        File pidFile = this.file;
+        new TenorPid().write(pidFile);
+        pidFile.deleteOnExit();
     }
 }
