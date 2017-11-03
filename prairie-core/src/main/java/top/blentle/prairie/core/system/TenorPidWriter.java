@@ -7,6 +7,7 @@ import top.blentle.prairie.core.event.support.EventListener;
 import top.blentle.prairie.core.util.Assert;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  * @author :  renhuan
@@ -41,7 +42,12 @@ public class TenorPidWriter implements EventListener {
     @Override
     public void onEvent(Event event) {
         //create pid file
-        writePidFile(event);
+        try {
+            writePidFile(event);
+        } catch (IOException e) {
+            String message = String.format("can not create pid file %s", this.file);
+            logger.warn(message, e);
+        }
     }
 
     @Override
@@ -49,7 +55,7 @@ public class TenorPidWriter implements EventListener {
         return false;
     }
 
-    private void writePidFile(Event event) {
+    private void writePidFile(Event event) throws IOException {
         File pidFile = this.file;
         new TenorPid().write(pidFile);
         pidFile.deleteOnExit();
